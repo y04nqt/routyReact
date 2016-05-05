@@ -14,7 +14,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
       <IndexRoute component={Home}></IndexRoute>
-      <Route path="archives" component={Archives}></Route>
+      <Route path="archives(/:article)" component={Archives}></Route>
       <Route path="featured" component={Featured}></Route>
       <Route path="settings" component={Settings}></Route>
     </Route>
