@@ -6,18 +6,18 @@ import Nav from "../components/layout/Nav";
 
 export default class Layout extends React.Component {
   navigate(){
-    console.log(this.props);
-    this.props.history.pushState(null, "/featured");
+    this.context.router.pushState(null, "/featured");
   }
   render() {
     console.log("layout");
-    const { history } = this.props;
-    console.log(history.isActive("archives"));
+    // const { history } = this.props;
+    // console.log(history.isActive("archives"));
     return (
       <div>
         <Nav location={location}/>
         <h1>KillerNews.net</h1>
         {this.props.children}
+        <Footer />
       </div>
     );
   }
